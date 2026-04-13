@@ -1,0 +1,38 @@
+# OS-Jackfruit .gitignore
+
+# ── Alpine rootfs directories — NEVER commit these ────────────────────────────
+rootfs-base/
+rootfs-*/
+
+# ── Alpine tarball ────────────────────────────────────────────────────────────
+*.tar.gz
+
+# ── Kernel module build artifacts ─────────────────────────────────────────────
+*.ko
+*.mod
+*.mod.c
+*.o
+*.symvers
+*.order
+.tmp_versions/
+.*.cmd
+Module.symvers
+modules.order
+
+# ── User-space build artifacts ────────────────────────────────────────────────
+boilerplate/engine
+boilerplate/cpu_hog
+boilerplate/io_pulse
+boilerplate/memory_hog
+
+# ── Runtime artifacts ─────────────────────────────────────────────────────────
+/tmp/engine.sock
+/tmp/engine-*.log
+
+# ── Editor / OS ───────────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
